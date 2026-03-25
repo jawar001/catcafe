@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purr & Pour — Cat Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader" class="loader">
+        <div class="paw-loader">🐾</div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <header class="navbar">
+        <div class="logo">Purr & Pour <span>🐱</span></div>
+        <nav class="nav-links">
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
+            <a href="#booking" class="btn btn-primary" id="nav-book-btn">Book Now</a>
+        </nav>
+        <button class="burger-menu" id="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero fade-in-section">
+            <div class="hero-content">
+                <h1>Sip, Pet, Relax. <br>Your Cozy Cat Haven.</h1>
+                <p>Experience the purr-fect blend of premium coffee and cuddly companions in a warm, relaxing atmosphere.</p>
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn btn-primary">Book Cat Time</a>
+                    <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+                </div>
+                <div class="trust-badges">
+                    <div class="badge">⭐ 4.9/5 (500+ Reviews)</div>
+                    <div class="badge">🐾 15+ Rescue Cats</div>
+                    <div class="badge">☕ Premium Roasts</div>
+                </div>
+            </div>
+            <div class="hero-image glass-card">
+                <img src="img/hero_cat.png" alt="A cute cat barista welcoming guests">
+            </div>
+        </section>
+
+        <!-- 2. Interactive Menu -->
+        <section id="menu" class="menu section-padding fade-in-section">
+            <h2>Our Purr-fect Menu</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="beverages">Beverages</button>
+                <button class="tab-btn" data-tab="snacks">Snacks</button>
+                <button class="tab-btn" data-tab="specials">Specials</button>
+            </div>
+            <div class="menu-content">
+                <div id="beverages" class="tab-pane active">
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/espresso,coffee?lock=11" alt="Espresso">
+                        <div class="item-details">
+                            <h3>Espresso</h3>
+                            <span class="price">$2.9</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/americano,coffee?lock=12" alt="Americano">
+                        <div class="item-details">
+                            <h3>Americano</h3>
+                            <span class="price">$2.9</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/cappuccino,coffee?lock=13" alt="Cappuccino">
+                        <div class="item-details">
+                            <h3>Cappuccino</h3>
+                            <span class="price">$2.9</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/latte,coffee?lock=14" alt="Latte">
+                        <div class="item-details">
+                            <h3>Latte</h3>
+                            <span class="price">$2.9</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/flatwhite,coffee?lock=15" alt="Flat White">
+                        <div class="item-details">
+                            <h3>Flat White</h3>
+                            <span class="price">$2.9</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/coldbrew,coffee?lock=16" alt="Cold Brew">
+                        <div class="item-details">
+                            <h3>Cold Brew</h3>
+                            <span class="price">$2.9</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/matcha,latte?lock=17" alt="Matcha Latte">
+                        <div class="item-details">
+                            <h3>Matcha Latte</h3>
+                            <span class="price">$2.9</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/hotchocolate?lock=18" alt="Choco Latte">
+                        <div class="item-details">
+                            <h3>Choco Latte</h3>
+                            <span class="price">$2.9</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/caramel,milk?lock=19" alt="Caramel Milk">
+                        <div class="item-details">
+                            <h3>Caramel Milk</h3>
+                            <span class="price">$2.9</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="snacks" class="tab-pane">
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/chickenwings?lock=20" alt="Chicken Wings">
+                        <div class="item-details">
+                            <h3>Chicken Wings</h3>
+                            <p>Crispy fried chicken wings is one of our best seller.</p>
+                            <span class="price">$25</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/friedchicken?lock=21" alt="Fried Chicken">
+                        <div class="item-details">
+                            <h3>Fried Chicken</h3>
+                            <p>Bucket fried chicken with secret recipe will be always the favorite.</p>
+                            <span class="price">$35</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/roastedchicken?lock=22" alt="Roasted Chicken">
+                        <div class="item-details">
+                            <h3>Roasted Chicken</h3>
+                            <p>Roasted Chicken with barbeque sauce is our new recommendation.</p>
+                            <span class="price">$30</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/chickennuggets?lock=23" alt="Chicken Nugget">
+                        <div class="item-details">
+                            <h3>Chicken Nugget</h3>
+                            <p>Full meat, crispy chicken nugget served with tartar sauce.</p>
+                            <span class="price">$17</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/frenchfries?lock=24" alt="French Fries">
+                        <div class="item-details">
+                            <h3>French Fries</h3>
+                            <p>Good quality potato, deep fried and served with tomato sauce.</p>
+                            <span class="price">$12</span>
+                        </div>
+                    </div>
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/chickensalad?lock=25" alt="Chicken Salad">
+                        <div class="item-details">
+                            <h3>Chicken Salad</h3>
+                            <p>Green vegetable salad with roasted chicken and special dressing.</p>
+                            <span class="price">$22</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="specials" class="tab-pane">
+                    <div class="menu-item glass-card">
+                        <img src="https://loremflickr.com/150/150/fishandchips?lock=26" alt="Fish and chips">
+                        <div class="item-details">
+                            <h3>fish and chips</h3>
+                            <p>Cafe Borcelle</p>
+                            <span class="price">$2.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Employees -->
+        <section id="gallery" class="gallery section-padding fade-in-section">
+            <h2>Meet Our Employees</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item glass-card">
+                    <img src="img/cat_manager.png" alt="Oliver - Manager">
+                    <div class="gallery-overlay">
+                        <h3>Oliver - Manager</h3>
+                        <p>Ensures everything runs purr-fectly around here.</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card">
+                    <img src="img/cat_order_taker.png" alt="Luna - Order Taker">
+                    <div class="gallery-overlay">
+                        <h3>Luna - Order Taker</h3>
+                        <p>Ready to take your order with a sweet meow.</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card">
+                    <img src="img/cat_chef.png" alt="Milo - Item Maker Chef">
+                    <div class="gallery-overlay">
+                        <h3>Milo - Item Maker Chef</h3>
+                        <p>Whipping up the best drinks and snacks!</p>
+                    </div>
+                </div>
+                <div class="gallery-item glass-card">
+                    <img src="img/cat_server.png" alt="Bella - Table Server">
+                    <div class="gallery-overlay">
+                        <h3>Bella - Table Server</h3>
+                        <p>Delivers your food table to table safely.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Testimonials -->
+        <section id="testimonials" class="testimonials section-padding fade-in-section">
+            <h2>What Our Guests Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card glass-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"The coziest cafe I've ever visited! Luna slept on my lap the whole time I drank my Meowchiato."</p>
+                    <h4>— Sarah J.</h4>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Amazing atmosphere, great coffee, and the cats are so well cared for. Perfect place to unwind."</p>
+                    <h4>— Mark T.</h4>
+                </div>
+                <div class="testimonial-card glass-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Booked a session for my daughter's birthday. We used the 'Match Me' feature and had a blast!"</p>
+                    <h4>— Emily R.</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. About -->
+        <section id="about" class="about section-padding fade-in-section">
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <p>Purr & Pour was born out of a simple idea: bringing comfort, coffee, and cats together. We partner with local shelters to provide a loving foster home to our furry residents until they find their forever families.</p>
+                <p>Our cafe is designed to be a safe haven for both our guests and our cats. Soft pastel colors, warm lighting, and cozy nooks make it the perfect place to decompress.</p>
+                <div class="values">
+                    <div class="value-item">🏠 Comfort First</div>
+                    <div class="value-item">❤️ Animal Welfare</div>
+                    <div class="value-item">🤝 Community Built</div>
+                </div>
+            </div>
+            <div class="about-image glass-card">
+                <img src="https://loremflickr.com/600/400/cat,cafe?lock=10" alt="Inside the cafe">
+            </div>
+        </section>
+
+        <!-- 6. Booking System -->
+        <section id="booking" class="booking section-padding fade-in-section">
+            <div class="booking-container glass-card">
+                <h2>Book Your Cat Time</h2>
+                <p>Reserve your spot to secure cuddle time!</p>
+                
+                <form id="booking-form" class="custom-form">
+                    <div class="form-group">
+                        <label for="b-name">Name</label>
+                        <input type="text" id="b-name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="b-size">Party Size</label>
+                            <input type="number" id="b-size" min="1" max="10" required placeholder="e.g. 2">
+                        </div>
+                        <div class="form-group">
+                            <label for="b-date">Date</label>
+                            <input type="date" id="b-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="b-time">Time</label>
+                            <input type="time" id="b-time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-mood">Your Mood Today</label>
+                        <select id="b-mood">
+                            <option value="chill">Chill & Quiet</option>
+                            <option value="playful">Playful & Energetic</option>
+                            <option value="needy">Need All The Cuddles</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="b-notes">Special Notes</label>
+                        <textarea id="b-notes" rows="2" placeholder="Any allergies or special requests?"></textarea>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-primary w-100">Confirm Booking</button>
+                        <button type="button" id="match-me-btn" class="btn btn-secondary mt-1 w-100">🎲 Match Me with a Cat</button>
+                    </div>
+                </form>
+                <div id="cat-match-result" class="match-result hidden"></div>
+            </div>
+        </section>
+
+        <!-- 7. Contact Section -->
+        <section id="contact" class="contact section-padding fade-in-section">
+            <div class="contact-info glass-card">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We'd love to hear from you!</p>
+                <ul>
+                    <li>📍 109 university square, Erie, PA</li>
+                    <li>⏰ Tue - Sun: 9AM - 8PM</li>
+                    <li>📞 814-806(PAAW)</li>
+                </ul>
+            </div>
+            <div class="contact-form-container glass-card">
+                <form id="contact-form" class="custom-form">
+                    <div class="form-group">
+                        <label for="c-name">Name</label>
+                        <input type="text" id="c-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-email">Email</label>
+                        <input type="email" id="c-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-topic">Topic</label>
+                        <select id="c-topic">
+                            <option value="general">General Inquiry</option>
+                            <option value="adoption">Adoption</option>
+                            <option value="events">Private Events</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-message">Message</label>
+                        <textarea id="c-message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Purr & Pour <span>🐱</span></h3>
+                <p>Your daily dose of caffeine and purrs.</p>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Join the Mew-sletter</h4>
+                <form id="newsletter-form" class="news-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">IG</a>
+                    <a href="#">FB</a>
+                    <a href="#">TT</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Purr & Pour Cat Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Meow Sound -->
+    <audio id="meow-sound" src="https://actions.google.com/sounds/v1/animals/cat_meow_short.ogg"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
